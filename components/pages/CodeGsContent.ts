@@ -477,10 +477,22 @@ function addOrUpdateRecord(sheetName, data, id = null) {
     });
 
     if (id) { // Update
+      const dataToUpdate = { ...data };
+      // Securely handle password updates
+      if (sheetName === 'Users' && dataToUpdate.password) {
+        if (dataToUpdate.password.length > 0) {
+          dataToUpdate.password = hashPassword(dataToUpdate.password);
+        } else {
+          delete dataToUpdate.password; // Don't overwrite with empty password
+        }
+      } else if (sheetName === 'Users') {
+        delete dataToUpdate.password; // Ensure password field isn't touched if not provided
+      }
+
       const dataObjects = sheetDataToObject(sheet);
       const rowIndex = dataObjects.findIndex(row => row.id === id) + 2;
       if (rowIndex > 1) {
-        const updatedData = { ...dataObjects[rowIndex - 2], ...data };
+        const updatedData = { ...dataObjects[rowIndex - 2], ...dataToUpdate };
         sheet.getRange(rowIndex, 1, 1, headers.length).setValues([prepareRow(updatedData)]);
         return updatedData;
       }

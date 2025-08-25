@@ -10,7 +10,7 @@ import {
 
 class GoogleSheetService {
     private getScriptUrl(): string {
-        const url = localStorage.getItem('https://script.google.com/macros/s/AKfycbwWPYD-ZtPi61mPOZtMPlJl-elP1tFIRVbrNtGRusqCIBE0bSRZt3BMd0NyL5Yf0OI8/exec');
+        const url = localStorage.getItem('google_script_url');
         if (!url) {
             throw new Error('Google Apps Script URL is not configured. Please complete the setup.');
         }
