@@ -1,0 +1,5 @@
+{
+  "name": "Satit Udom Seuksa Equipment Management V.1.0",
+  "description": "A web application for managing the booking, borrowing, and returning of central equipment and tools for Satit Udom Seuksa School. The system is designed to be responsive, support Thai and English languages, and manage user roles.",
+  "requestFramePermissions": []
+}
