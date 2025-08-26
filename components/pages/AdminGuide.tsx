@@ -102,7 +102,7 @@ const ConnectionSetupPage: React.FC = () => {
             </Step>
              <Step num={4} title="ให้สิทธิ์การเข้าถึง และคัดลอก URL">
                  <ol className="list-decimal list-inside space-y-2">
-                    <li>ระบบจะขอสิทธิ์, ให้คลิก <strong>"Authorize access"</strong> และทำตามขั้นตอนเพื่ออนุญาต (อาจต้องกด Advanced > Go to...unsafe)</li>
+                    <li>ระบบจะขอสิทธิ์, ให้คลิก <strong>"Authorize access"</strong> และทำตามขั้นตอนเพื่ออนุญาต (อาจต้องกด Advanced {'>'} Go to...unsafe)</li>
                     <li>หลังจาก Deploy สำเร็จ, คุณจะเห็นหน้าต่าง "Deployment successfully" พร้อมกับ <strong>"Web app URL"</strong></li>
                     <li><strong>คัดลอก URL นี้</strong> โดยการกดปุ่ม "Copy"</li>
                 </ol>
@@ -147,7 +147,7 @@ const ConnectionSetupPage: React.FC = () => {
             </Step>
             <Step num={4} title="Authorize Access and Copy the URL">
                 <ol className="list-decimal list-inside space-y-2">
-                    <li>An authorization prompt will appear. Click <strong>"Authorize access"</strong> and follow the steps to grant permissions (you may need to click Advanced > Go to...unsafe).</li>
+                    <li>An authorization prompt will appear. Click <strong>"Authorize access"</strong> and follow the steps to grant permissions (you may need to click Advanced {'>'} Go to...unsafe).</li>
                     <li>After a successful deployment, you will see a "Deployment successfully" dialog with the <strong>"Web app URL"</strong>.</li>
                     <li><strong>Copy this URL</strong> by clicking the "Copy" button.</li>
                 </ol>
